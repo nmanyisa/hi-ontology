@@ -1,0 +1,141 @@
+Prefix(:=<http://www.semanticweb.org/noluthandomanyisa/ontologies/2018/5/untitled-ontology-11#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/noluthandomanyisa/ontologies/2018/5/hi-ontology>
+
+Declaration(Class(<http://www.semanticweb.org/noluthandomanyisa/ontologies/2018/5/hi-ontology#Alternate_Communication_Techniques>))
+Declaration(Class(<http://www.semanticweb.org/noluthandomanyisa/ontologies/2018/5/hi-ontology#Hearing_Aids>))
+Declaration(Class(<http://www.semanticweb.org/noluthandomanyisa/ontologies/2018/5/hi-ontology#Surgical_Intervention>))
+Declaration(Class(:Autosomal))
+Declaration(Class(:Causal_Gene))
+Declaration(Class(:Clinical_Presentation))
+Declaration(Class(:Diagnostics))
+Declaration(Class(:Dominant_Inheritance))
+Declaration(Class(:Hearing_Impairment_Ontology))
+Declaration(Class(:Hearing_Test))
+Declaration(Class(:Loci_Codes))
+Declaration(Class(:Mitochondrial))
+Declaration(Class(:Mode_of_Inheritance))
+Declaration(Class(:Modifiers))
+Declaration(Class(:Molecular_Diagnosis))
+Declaration(Class(:Non-Syndromic_Hearing_Impairment))
+Declaration(Class(:Phenotype))
+Declaration(Class(:Recessive_Inheritance))
+Declaration(Class(:Sex-linked))
+Declaration(Class(:Syndromic))
+Declaration(Class(:Therapeutics))
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.semanticweb.org/noluthandomanyisa/ontologies/2018/5/hi-ontology#Alternate_Communication_Techniques> (Alternate communication techniques)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/noluthandomanyisa/ontologies/2018/5/hi-ontology#Alternate_Communication_Techniques> "Alternate communication techniques")
+SubClassOf(<http://www.semanticweb.org/noluthandomanyisa/ontologies/2018/5/hi-ontology#Alternate_Communication_Techniques> :Therapeutics)
+
+# Class: <http://www.semanticweb.org/noluthandomanyisa/ontologies/2018/5/hi-ontology#Hearing_Aids> (Hearing Aids)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/noluthandomanyisa/ontologies/2018/5/hi-ontology#Hearing_Aids> "Hearing Aids")
+SubClassOf(<http://www.semanticweb.org/noluthandomanyisa/ontologies/2018/5/hi-ontology#Hearing_Aids> :Therapeutics)
+
+# Class: <http://www.semanticweb.org/noluthandomanyisa/ontologies/2018/5/hi-ontology#Surgical_Intervention> (Surgical intervention)
+
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/noluthandomanyisa/ontologies/2018/5/hi-ontology#Surgical_Intervention> "Surgical intervention")
+SubClassOf(<http://www.semanticweb.org/noluthandomanyisa/ontologies/2018/5/hi-ontology#Surgical_Intervention> :Therapeutics)
+
+# Class: :Autosomal (:Autosomal)
+
+SubClassOf(:Autosomal :Mode_of_Inheritance)
+
+# Class: :Causal_Gene (Genes resulting in hearing impairment)
+
+AnnotationAssertion(rdfs:label :Causal_Gene "Causal Genes")
+AnnotationAssertion(rdfs:label :Causal_Gene "Genes resulting in hearing impairment")
+SubClassOf(:Causal_Gene :Hearing_Impairment_Ontology)
+
+# Class: :Clinical_Presentation (Clinical Presentation)
+
+AnnotationAssertion(rdfs:label :Clinical_Presentation "Clinical Presentation")
+SubClassOf(:Clinical_Presentation :Hearing_Impairment_Ontology)
+
+# Class: :Diagnostics (Diagnostics)
+
+AnnotationAssertion(rdfs:label :Diagnostics "Diagnostics"^^xsd:string)
+SubClassOf(:Diagnostics :Hearing_Impairment_Ontology)
+
+# Class: :Dominant_Inheritance (:Dominant_Inheritance)
+
+SubClassOf(:Dominant_Inheritance :Autosomal)
+
+# Class: :Hearing_Impairment_Ontology (Hearing impairment ontology)
+
+AnnotationAssertion(rdfs:label :Hearing_Impairment_Ontology "Hearing impairment ontology")
+
+# Class: :Hearing_Test (Hearing Test)
+
+AnnotationAssertion(rdfs:label :Hearing_Test "Hearing Test")
+SubClassOf(:Hearing_Test :Diagnostics)
+
+# Class: :Loci_Codes (Loci Codes)
+
+AnnotationAssertion(rdfs:label :Loci_Codes "Loci Codes")
+SubClassOf(:Loci_Codes :Hearing_Impairment_Ontology)
+
+# Class: :Mitochondrial (:Mitochondrial)
+
+SubClassOf(:Mitochondrial :Mode_of_Inheritance)
+
+# Class: :Mode_of_Inheritance (Mode of Inheritance)
+
+AnnotationAssertion(rdfs:label :Mode_of_Inheritance "Mode of Inheritance")
+SubClassOf(:Mode_of_Inheritance :Hearing_Impairment_Ontology)
+
+# Class: :Modifiers (Modifiers of Hearing Impairment Clinical Presentation)
+
+AnnotationAssertion(rdfs:label :Modifiers "Modifiers of Hearing Impairment Clinical Presentation")
+SubClassOf(:Modifiers :Hearing_Impairment_Ontology)
+
+# Class: :Molecular_Diagnosis (Molecular Diagnosis)
+
+AnnotationAssertion(rdfs:label :Molecular_Diagnosis "Molecular Diagnosis")
+SubClassOf(:Molecular_Diagnosis :Diagnostics)
+
+# Class: :Non-Syndromic_Hearing_Impairment (Non-Syndromic Hearing Impairment)
+
+AnnotationAssertion(rdfs:comment :Non-Syndromic_Hearing_Impairment "Hearing impairment presenting without additional clinical features.")
+AnnotationAssertion(rdfs:label :Non-Syndromic_Hearing_Impairment "Non-Syndromic Hearing Impairment"@en)
+SubClassOf(:Non-Syndromic_Hearing_Impairment :Clinical_Presentation)
+
+# Class: :Phenotype (Phenotypes)
+
+AnnotationAssertion(rdfs:label :Phenotype "Phenotypes")
+SubClassOf(:Phenotype :Hearing_Impairment_Ontology)
+
+# Class: :Recessive_Inheritance (:Recessive_Inheritance)
+
+SubClassOf(:Recessive_Inheritance :Autosomal)
+
+# Class: :Sex-linked (:Sex-linked)
+
+SubClassOf(:Sex-linked :Mode_of_Inheritance)
+
+# Class: :Syndromic (Syndromic Hearing Impairment)
+
+AnnotationAssertion(rdfs:comment :Syndromic "Hearing impairment presenting with additional clinical features.")
+AnnotationAssertion(rdfs:label :Syndromic "Syndromic Hearing Impairment"@en)
+SubClassOf(:Syndromic :Clinical_Presentation)
+
+# Class: :Therapeutics (Therapeutics)
+
+AnnotationAssertion(rdfs:label :Therapeutics "Therapeutics")
+SubClassOf(:Therapeutics :Hearing_Impairment_Ontology)
+
+
+)
